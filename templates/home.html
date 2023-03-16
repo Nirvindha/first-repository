@@ -1,0 +1,37 @@
+  <!DOCTYPE html>
+  <html>
+    
+    <head>
+        <title class="text-center">TechToday Careers</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+      <style>
+        #career-01{
+         width:100%;
+        height: 400px;
+        object-fit: cover;
+        }
+      </style>
+      
+    </head>
+    <body>
+      <div class="container">
+     <h1 class="text-center mt-2 mt-4">TechToday Careers</h1>
+      <img class="img-fliud" id="career-01"src ="https://first-repository.nirvindhabalu.repl.co/static/career-01.jpg"height="320">
+      <h2 class="text-center  mt-2 mt-4">About TechToday</h2>
+      <p class="lead">
+        There are many benefits to having a career purpose. First, it will inspire you to do and be more in your job, which will light you up and make your life come alive. You’ll make more progress in your career too, because you’re engaged and interested in what you’re doing. In fact, being fully engaged in your work will lead to more opportunities for progression than any amount of sheer hard work alone.
+  </p>
+      <h2 class="text-center  mt-2 mt-4">Open positions</h2>
+      <div>
+       {% for job in jobs %}
+          {% include 'jobitem.html' %}
+        {% endfor %}
+      </div>
+      <div class="text-center">
+      <button class="btn btn-primary btn-lg">Contact Us</button>
+      </div> 
+    </body>
+  
+  </html>
